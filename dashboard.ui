@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1361</width>
+    <height>690</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>AC susceptometry</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../../usr/share/pixmaps/cubeview48.png</normaloff>../../../../../usr/share/pixmaps/cubeview48.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="init_button">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>20</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start measurements</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>0</y>
+      <width>441</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>URW Chancery L</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>AC susceptometry to measure superconducting phase transition temperature</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="ygraph">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>501</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Save_data">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>640</y>
+      <width>71</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="filename">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>640</y>
+      <width>131</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>datafile</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="xgraph">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="ampgraph">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>501</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="phasegraph">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>520</y>
+      <width>501</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="auto_phase_button">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>20</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Auto Phase</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="freq">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>20</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="suffix">
+     <string> KHz</string>
+    </property>
+    <property name="minimum">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="value">
+     <double>5.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="set_freq_button">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>41</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set frequency</string>
+    </property>
+   </widget>
+   <widget class="PlotWidget" name="zoomgraph">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>80</y>
+      <width>821</width>
+      <height>561</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cleardata">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>640</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear all data</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="set_amp_button">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>41</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set amplitude</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="amplitude">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>20</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="suffix">
+     <string> V</string>
+    </property>
+    <property name="decimals">
+     <number>3</number>
+    </property>
+    <property name="minimum">
+     <double>0.004000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>5.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.002000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.500000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>669</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Author: Jithin B.P.</string>
+    </property>
+   </widget>
+  </widget>
+  <action name="actionSave_as">
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>init_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>start_measuring()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1165</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>auto_phase_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>autophase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1113</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_freq_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>set_frequency()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>995</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>730</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cleardata</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>cleartraces()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1061</x>
+     <y>680</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>957</x>
+     <y>689</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save_data</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>saveall()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>697</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>765</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>set_amp_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>set_amp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>849</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>862</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>gogo()</slot>
+  <slot>dat()</slot>
+  <slot>start_measuring()</slot>
+  <slot>read_buffer()</slot>
+  <slot>dump_to_file()</slot>
+  <slot>set_pulse_width()</slot>
+  <slot>set_voltage_compliance()</slot>
+  <slot>set_vc()</slot>
+  <slot>toggle_state()</slot>
+  <slot>byebye()</slot>
+  <slot>set_pulse_stop()</slot>
+  <slot>set_pulse_start()</slot>
+  <slot>set_pulse_stepsize()</slot>
+  <slot>autophase()</slot>
+  <slot>set_frequency()</slot>
+  <slot>cleartraces()</slot>
+  <slot>saveall()</slot>
+  <slot>set_amp()</slot>
+ </slots>
+</ui>
