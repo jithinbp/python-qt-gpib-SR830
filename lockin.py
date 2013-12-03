@@ -9,6 +9,6 @@ class Lockin():
 	def write(self,cmd):
 		self.device.write(cmd)
 	def read(self,bytes):
-		self.device.read(bytes) #return '%f,%f,%f,%f'%(random.random(),random.random(),random.random(),random.random())
+		return self.device.read(bytes) #return '%f,%f,%f,%f'%(random.random(),random.random(),random.random(),random.random())
 	def clear(self):
 		self.device.clear()
